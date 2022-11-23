@@ -340,9 +340,6 @@ btnPlus.addEventListener('click', (e) => {
   input3.setAttribute('placeholder', 'credits');
   input3.setAttribute('min', '0');
   input3.setAttribute('max', '6');
-  input3.addEventListener('change', () => {
-    setGpa();
-  });
 
   let newSelect = document.createElement('select');
   newSelect.classList.add('select');
@@ -413,11 +410,6 @@ btnPlus.addEventListener('click', (e) => {
   newSelect.appendChild(opt12);
   newSelect.appendChild(opt13);
 
-  newSelect.addEventListener('change', (e) => {
-    setGpa();
-    changeColor(e.target);
-  });
-
   let newButton = document.createElement('button');
   newButton.classList.add('trash-button');
   let newItag = document.createElement('i');
@@ -425,19 +417,19 @@ btnPlus.addEventListener('click', (e) => {
   newItag.classList.add('fa-trash');
   newButton.appendChild(newItag);
 
-  newButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    //另一種監聽法：animationend
-    e.target.parentElement.parentElement.style.animation =
-      'scaleDown 0.5s ease forwards';
-    e.target.parentElement.parentElement.addEventListener(
-      'animationend',
-      (e) => {
-        e.target.remove();
-        setGpa();
-      }
-    );
-  });
+  // newButton.addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   //另一種監聽法：animationend
+  //   e.target.parentElement.parentElement.style.animation =
+  //     'scaleDown 0.5s ease forwards';
+  //   e.target.parentElement.parentElement.addEventListener(
+  //     'animationend',
+  //     (e) => {
+  //       e.target.remove();
+  //       setGpa();
+  //     }
+  //   );
+  // });
 
   newDiv.appendChild(input1);
   newDiv.appendChild(input2);
@@ -447,5 +439,6 @@ btnPlus.addEventListener('click', (e) => {
 
   newForm.appendChild(newDiv);
   inputArea.appendChild(newForm);
+  init();
   newForm.style.animation = 'scaleUp 0.5s ease forwards';
 });

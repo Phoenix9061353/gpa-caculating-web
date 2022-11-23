@@ -137,6 +137,11 @@ body div.offcanvas {
   color: black;
 }
 
+@media screen and (max-width: 800px) {
+  body div.all-inputs form input {
+    width: 20%;
+  }
+}
 .remove {
   transition: all 0.5s ease;
   transform: scale(0);
