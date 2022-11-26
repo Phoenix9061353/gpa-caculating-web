@@ -79,6 +79,14 @@ const setGpa = function () {
       creditSum += 0;
       sum += 0;
     } else {
+      if (
+        credits[i].valueAsNumber < 0 ||
+        credits[i].valueAsNumber > 6 ||
+        !Number.isInteger(credits[i].valueAsNumber)
+      ) {
+        alert('所有的credits欄位的值皆需為0~6的整數數字！');
+        return;
+      }
       creditSum += credits[i].valueAsNumber;
       sum += credits[i].valueAsNumber * convertor(selects[i].value);
     }
