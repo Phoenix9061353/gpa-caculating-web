@@ -9,6 +9,7 @@ ul {
 }
 
 a {
+  font-family: "Noto Sans TC", sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -123,8 +124,7 @@ body main section.main-part div.result {
   height: 200px;
   text-align: center;
   border: 3px solid red;
-  -webkit-animation: border_color 8s infinite;
-          animation: border_color 8s infinite;
+  animation: border_color 8s infinite;
 }
 body main section.main-part div.result p {
   margin-top: 15px;
@@ -147,15 +147,6 @@ body div.offcanvas {
   transform: scale(0);
 }
 
-@-webkit-keyframes scaleUp {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
 @keyframes scaleUp {
   from {
     transform: scale(0);
@@ -164,31 +155,12 @@ body div.offcanvas {
     transform: scale(1);
   }
 }
-@-webkit-keyframes scaleDown {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
 @keyframes scaleDown {
   from {
     transform: scale(1);
   }
   to {
     transform: scale(0);
-  }
-}
-@-webkit-keyframes border_color {
-  0% {
-    border-color: red;
-  }
-  33% {
-    border-color: limegreen;
-  }
-  66% {
-    border-color: yellow;
   }
 }
 @keyframes border_color {
